@@ -3,58 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="jquery-3.6.0.min.js"> </script>
-     <script src="funciones.js">   </script>
     <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 20px;
+            padding: 20px;
+        }
+        h3 {
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+        form {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input[type="text"], input[type="button"] {
+            padding: 5px;
+            margin: 5px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+        input[type="button"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="button"]:hover {
+            background-color: #45a049;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        section {
+            margin-top: 20px;
+        }
+    </style>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="funciones.js"></script>
 </head>
 <body>
 
 <h3>Consultar</h3>						
-<form id="myForm"  method="post">
-<input type="button" name="btnconsultar" value="CONSULTAR" id="consultar"><br/><br/>
+<form id="myForm" method="post">
+    <input type="button" name="btnconsultar" value="CONSULTAR" id="consultar"><br/><br/>
 </form>
 <section id="servidor">
     <table border='1'><tr><th> ID </th><th> Usuario </th><th> Edad </th></tr>
     </table>    
 </section>
+
 <h3>Consultar un usuario</h3>
-<form id="myForm1"  method="post">
-<div><label for="usuario_uno">Usuario<input type="text" name="usuario_uno" id="usuario" ></div>
-<div><label for="clave_uno">Clave</label><input type="text" name="clave_uno" id="clave" > </div>
-<input type="button" name="btnconsultaruno" value="CONSULTAR UNO" id="consultarUno"><br/><br/>
+<form id="myForm1" method="post">
+    <div><label for="usuario_uno">Usuario</label><input type="text" name="usuario_uno" id="usuario"></div>
+    <div><label for="clave_uno">Clave</label><input type="text" name="clave_uno" id="clave"></div>
+    <input type="button" name="btnconsultaruno" value="CONSULTAR UNO" id="consultarUno"><br/><br/>
 </form>
 <section id="servidor2">
     <p></p>  
 </section>
+
 <h3>Ingresar registro</h3>
-<form id="myForm2"  method="post">
-    <div><label for="usuario">Usuario<input type="text" name="usuario" id="usuarioi" ></div>
-    <div><label for="clave">Clave</label><input type="text" name="clave" id="clavei" > </div>
-    <div><label for="edad">Edad<input type="text" name="edad" id="edadi" ></div>
-    <div><label for="tipo">Tipo</label><input type="text" name="tipo" id="tipoi" > </div>
-    <input type="button" name="btninsertar" value="registrar" id="registrar"><br/><br/>
-</form>   
-    <section id="servidor3">
-        <p></p>  
-    </section>
-    <h3>Eliminar</h3>
-    <form id="myForm1"   method="post">
-        <div><label for="usuario">Usuario<input type="text" name="usuariob" id="usuariob" ></div>
-        <div><label for="clave">Clave</label><input type="text" name="claveb" id="claveb" > </div>
-        <input type="button" name="btneliminar" value="Eliminar" id="eliminar"><br/><br/>
-        </form>
-        <section id="servidor4">
-            <p></p>  
-        </section>
-        <h3>Actualizar </h3>
-        <form id="myForm1"  method="post">
-            <div><label for="usuario">Usuario<input type="text" name="usuarioa" id="usuarioa" ></div>
-            <div><label for="clave">Clave</label><input type="text" name="clavea" id="clavea" > </div>
-            <div><label for="clavenueva">Clave Nueva</label><input type="text" name="clavenueva" id="clavenueva" > </div>
-            <input type="button" name="btnactualizar" value="Actualizarr" id="actualizar"><br/><br/>
-            </form>
-            <section id="servidor5">
-                <p></p>  
-            </section>
+<form id="myForm2" method="post">
+    <div><label for="usuario">Usuario</label><input type="text" name="usuario" id="usuarioi"></div>
+    <div><label for="clave">Clave</label><input type="text" name="clave" id="clavei"></div>
+    <div><label for="edad">Edad</label><input type="text" name="edad" id="edadi"></div>
+    <div><label for="tipo">Tipo</label><input type="text" name="tipo" id="tipoi"></div>
+    <input type="button" name="btninsertar" value="Registrar" id="registrar"><br/><br/>
+</form>
+<section id="servidor3">
+    <p></p>  
+</section>
+
+<h3>Eliminar</h3>
+<form id="myForm3" method="post">
+    <div><label for="usuariob">Usuario</label><input type="text" name="usuariob" id="usuariob"></div>
+    <div><label for="claveb">Clave</label><input type="text" name="claveb" id="claveb"></div>
+    <input type="button" name="btneliminar" value="Eliminar" id="eliminar"><br/><br/>
+</form>
+<section id="servidor4">
+    <p></p>  
+</section>
+
+<h3>Actualizar</h3>
+<form id="myForm4" method="post">
+    <div><label for="usuarioa">Usuario</label><input type="text" name="usuarioa" id="usuarioa"></div>
+    <div><label for="clavea">Clave</label><input type="text" name="clavea" id="clavea"></div>
+    <div><label for="clavenueva">Clave Nueva</label><input type="text" name="clavenueva" id="clavenueva"></div>
+    <input type="button" name="btnactualizar" value="Actualizar" id="actualizar"><br/><br/>
+</form>
+<section id="servidor5">
+    <p></p>  
+</section>
+
 </body>
 </html>
